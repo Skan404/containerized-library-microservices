@@ -1,0 +1,12 @@
+<form (ngSubmit)="saveCategory()">
+    <div>
+      <label for="nazwa">Nazwa:</label>
+      <input id="nazwa" type="text" [(ngModel)]="nazwa" name="nazwa" required />
+    </div>
+    <div>
+      <label for="lokalizacja">Lokalizacja:</label>
+      <input id="lokalizacja" type="text" [(ngModel)]="lokalizacja" name="lokalizacja" />
+    </div>
+    <button type="submit">Zapisz</button>
+  </form>
+  

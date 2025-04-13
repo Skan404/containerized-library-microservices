@@ -1,0 +1,20 @@
+<h1>Dodaj nową książkę</h1>
+<form (ngSubmit)="saveBook()">
+  <div>
+    <label for="tytul">Tytuł:</label>
+    <input id="tytul" type="text" [(ngModel)]="tytul" name="tytul" required />
+  </div>
+  <div>
+    <label for="autor">Autor:</label>
+    <input id="autor" type="text" [(ngModel)]="autor" name="autor" required />
+  </div>
+  <div>
+    <label for="isbn">ISBN:</label>
+    <input id="isbn" type="text" [(ngModel)]="isbn" name="isbn" />
+  </div>
+  <div>
+    <label for="liczbaStron">Liczba stron:</label>
+    <input id="liczbaStron" type="number" [(ngModel)]="liczbaStron" name="liczbaStron" />
+  </div>
+  <button type="submit">Dodaj książkę</button>
+</form>

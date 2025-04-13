@@ -1,0 +1,8 @@
+<h1>Szczegóły książki</h1>
+<div *ngIf="book">
+  <p><strong>Tytuł:</strong> {{ book.tytul }}</p>
+  <p><strong>Autor:</strong> {{ book.autor }}</p>
+  <p><strong>ISBN:</strong> {{ book.isbn }}</p>
+  <p><strong>Liczba stron:</strong> {{ book.liczbaStron }}</p>
+</div>
+<button (click)="goBack()">Powrót</button>

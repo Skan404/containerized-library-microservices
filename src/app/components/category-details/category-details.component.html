@@ -1,0 +1,16 @@
+<h1>Szczegóły kategorii</h1>
+<div *ngIf="category">
+  <p><strong>Nazwa:</strong> {{ category.nazwa }}</p>
+  <p><strong>Lokalizacja:</strong> {{ category.lokalizacja }}</p>
+</div>
+
+<h2>Lista elementów</h2>
+<button [routerLink]="['/categories', category.id, 'books', 'new']">Dodaj książkę</button> <!-- Guzik dodawania -->
+
+<ul>
+  <li *ngFor="let element of elements">
+    {{ element.tytul || 'Nieznany tytuł' }} <button (click)="deleteElement(element.id)">Usuń</button>
+    <button [routerLink]="['/categories', category.id, 'books', 'edit', element.id]">Edytuj</button> <!-- Guzik do edycji -->
+    <button [routerLink]="['/categories', category.id, 'books', 'details', element.id]">Szczegóły</button>
+  </li>
+</ul>
