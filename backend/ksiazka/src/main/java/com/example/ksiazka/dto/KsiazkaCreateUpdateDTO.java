@@ -43,10 +43,10 @@ public class KsiazkaCreateUpdateDTO {
     }
 
     public UUID getBibliotekaId() {
-        return bibliotekaId; // Getter dla bibliotekaId
+        return bibliotekaId;
     }
 
     public void setBibliotekaId(UUID bibliotekaId) {
-        this.bibliotekaId = bibliotekaId; // Setter dla bibliotekaId
+        this.bibliotekaId = bibliotekaId;
     }
 }
