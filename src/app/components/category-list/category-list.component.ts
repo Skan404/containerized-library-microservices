@@ -8,13 +8,13 @@ import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-category-list',
   standalone: true,
-  imports: [CommonModule, RouterModule, FormsModule], // Dodaj FormsModule
+  imports: [CommonModule, RouterModule, FormsModule],
   templateUrl: './category-list.component.html',
   styleUrls: ['./category-list.component.scss'],
 })
 
 export class CategoryListComponent {
-  categories: any[] = []; // Typ kategorii, zmień jeśli masz zdefiniowany model
+  categories: any[] = [];
   editedCategory: any = null;
 
 
@@ -33,8 +33,8 @@ export class CategoryListComponent {
   }
 
   editCategory(category: any): void {
-    console.log('Edytuj kategorię:', category); // Sprawdź obiekt
-    this.editedCategory = { ...category }; // Kopiuj dane kategorii
+    console.log('Edytuj kategorię:', category); 
+    this.editedCategory = { ...category }; 
     console.log('EditedCategory ustawione na:', this.editedCategory);
   }
   
