@@ -7,17 +7,14 @@ public class KsiazkaCollectionDTO {
     private UUID id;
     private String tytul;
 
-    // Konstruktor bezargumentowy
     public KsiazkaCollectionDTO() {
     }
 
-    // Konstruktor z wszystkimi polami
     public KsiazkaCollectionDTO(UUID id, String tytul) {
         this.id = id;
         this.tytul = tytul;
     }
 
-    // Gettery i settery
     public UUID getId() {
         return id;
     }
@@ -34,7 +31,6 @@ public class KsiazkaCollectionDTO {
         this.tytul = tytul;
     }
 
-    // Metoda toString
     @Override
     public String toString() {
         return "KsiazkaCollectionDTO{" +
