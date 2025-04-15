@@ -22,10 +22,10 @@ export class CategoryFormComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    // Pobierz ID z parametru ścieżki
+    // Pobierz ID z parametru sciezki
     this.id = this.route.snapshot.paramMap.get('id');
     if (this.id) {
-      // Załaduj istniejącą kategorię, jeśli ID jest dostępne
+      // Załaduj istniejaca kategorie
       this.bibliotekaService.getCategoryById(this.id).subscribe((category) => {
         this.nazwa = category.nazwa;
         this.lokalizacja = category.lokalizacja;
