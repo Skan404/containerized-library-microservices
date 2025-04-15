@@ -7,17 +7,14 @@ public class BibliotekaCollectionDTO {
     private UUID id;
     private String nazwa;
 
-    // Konstruktor bezargumentowy
     public BibliotekaCollectionDTO() {
     }
 
-    // Konstruktor z wszystkimi polami
     public BibliotekaCollectionDTO(UUID id, String nazwa) {
         this.id = id;
         this.nazwa = nazwa;
     }
 
-    // Gettery i settery
     public UUID getId() {
         return id;
     }
@@ -34,7 +31,6 @@ public class BibliotekaCollectionDTO {
         this.nazwa = nazwa;
     }
 
-    // Metoda toString
     @Override
     public String toString() {
         return "BibliotekaCollectionDTO{" +
@@ -43,7 +39,6 @@ public class BibliotekaCollectionDTO {
                 '}';
     }
 
-    // Metody equals i hashCode
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
