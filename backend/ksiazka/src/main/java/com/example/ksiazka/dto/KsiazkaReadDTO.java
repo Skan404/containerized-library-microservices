@@ -10,7 +10,6 @@ public class KsiazkaReadDTO {
     private int liczbaStron;
     private UUID bibliotekaId;
 
-    // Gettery i settery
     public UUID getId() {
         return id;
     }
