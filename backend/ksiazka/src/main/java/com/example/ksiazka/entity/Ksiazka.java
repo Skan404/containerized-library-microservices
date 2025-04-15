@@ -26,11 +26,9 @@ public class Ksiazka {
     @Column(name = "biblioteka_id")
     private UUID bibliotekaId;
 
-    // Konstruktor bezargumentowy
     public Ksiazka() {
     }
 
-    // Konstruktor z wszystkimi polami
     public Ksiazka(UUID id, String tytul, String autor, String isbn, int liczbaStron, UUID bibliotekaId) {
         this.id = id;
         this.tytul = tytul;
@@ -40,7 +38,6 @@ public class Ksiazka {
         this.bibliotekaId = bibliotekaId;
     }
 
-    // Gettery i settery
     public UUID getId() {
         return id;
     }
@@ -89,7 +86,6 @@ public class Ksiazka {
         this.bibliotekaId = bibliotekaId;
     }
 
-    // Metoda toString
     @Override
     public String toString() {
         return "Ksiazka{" +
