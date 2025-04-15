@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms'; // Import FormsModule
+import { FormsModule } from '@angular/forms';
 import { BibliotekaService } from '../../services/biblioteka.service';
 @Component({
   selector: 'app-book-form',
   standalone: true,
-  imports: [CommonModule, FormsModule], // Dodaj FormsModule tutaj
+  imports: [CommonModule, FormsModule],
   templateUrl: './book-form.component.html',
   styleUrls: ['./book-form.component.scss']
 })
@@ -16,7 +16,7 @@ export class BookFormComponent implements OnInit {
   isbn: string = '';
   liczbaStron: number | null = null;
   bibliotekaId: string | null = null;
-  bookId: string | null = null; // ID książki (dla edycji)
+  bookId: string | null = null;
 
   constructor(
     private bibliotekaService: BibliotekaService,
@@ -28,7 +28,6 @@ export class BookFormComponent implements OnInit {
     this.bibliotekaId = this.route.snapshot.paramMap.get('categoryId');
     this.bookId = this.route.snapshot.paramMap.get('bookId');
 
-    // Jeśli edytujemy książkę, pobierz jej dane
     if (this.bookId) {
       this.bibliotekaService.getElementById(this.bookId).subscribe((book) => {
         this.tytul = book.tytul;
@@ -41,7 +40,7 @@ export class BookFormComponent implements OnInit {
 
   saveBook(): void {
     if (this.bookId) {
-      // Aktualizacja istniejącej książki
+      // Aktualizacja istniejacej ksiazki
       const updatedBook = {
         tytul: this.tytul,
         autor: this.autor,
