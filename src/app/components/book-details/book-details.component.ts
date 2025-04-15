@@ -20,7 +20,7 @@ export class BookDetailsComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    const bookId = this.route.snapshot.paramMap.get('bookId'); // ID książki z parametru ścieżki
+    const bookId = this.route.snapshot.paramMap.get('bookId');
     if (bookId) {
       this.bibliotekaService.getElementById(bookId).subscribe(
         (book) => {
@@ -35,6 +35,6 @@ export class BookDetailsComponent implements OnInit {
 
   goBack(): void {
     const categoryId = this.route.snapshot.paramMap.get('categoryId');
-    this.router.navigate([`/categories/${categoryId}`]); // Powrót do szczegółów kategorii
+    this.router.navigate([`/categories/${categoryId}`]);
   }
 }
