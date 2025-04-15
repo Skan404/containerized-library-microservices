@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router'; // Import RouterModule
+import { RouterModule } from '@angular/router';
 import { BibliotekaService } from '../../services/biblioteka.service';
 
 @Component({
   selector: 'app-category-details',
   standalone: true,
-  imports: [CommonModule, RouterModule], // Dodaj RouterModule
+  imports: [CommonModule, RouterModule],
   templateUrl: './category-details.component.html',
   styleUrls: ['./category-details.component.scss']
 })
@@ -29,7 +29,7 @@ export class CategoryDetailsComponent implements OnInit {
       });
   
       this.bibliotekaService.getElementsByCategoryId(id).subscribe((elements) => {
-        console.log('Pobrane elementy:', elements); // Debugowanie
+        console.log('Pobrane elementy:', elements); // Debug
         this.elements = elements;
       });
     }
