@@ -8,18 +8,15 @@ public class BibliotekaReadDTO {
     private String nazwa;
     private String lokalizacja;
 
-    // Konstruktor bezargumentowy
     public BibliotekaReadDTO() {
     }
 
-    // Konstruktor z wszystkimi polami
     public BibliotekaReadDTO(UUID id, String nazwa, String lokalizacja) {
         this.id = id;
         this.nazwa = nazwa;
         this.lokalizacja = lokalizacja;
     }
 
-    // Gettery i settery
     public UUID getId() {
         return id;
     }
@@ -44,7 +41,6 @@ public class BibliotekaReadDTO {
         this.lokalizacja = lokalizacja;
     }
 
-    // Metoda toString
     @Override
     public String toString() {
         return "BibliotekaReadDTO{" +
@@ -54,7 +50,6 @@ public class BibliotekaReadDTO {
                 '}';
     }
 
-    // Metody equals i hashCode
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
