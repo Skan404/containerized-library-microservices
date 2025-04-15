@@ -1,9 +1,9 @@
 <h1>Lista kategorii</h1>
-<button routerLink="/categories/new">Dodaj kategorię</button> <!-- Guzi do dodawania -->
+<button routerLink="/categories/new">Dodaj kategorię</button> 
 <ul>
   <li *ngFor="let category of categories">
     {{ category.nazwa }}
-    <button [routerLink]="['/categories/edit', category.id]">Edytuj</button> <!-- Guzik do edycji -->
+    <button [routerLink]="['/categories/edit', category.id]">Edytuj</button>
     <button [routerLink]="['/categories', category.id]">Szczegóły</button>
     <button (click)="deleteCategory(category.id)">Usuń</button>
   </li>
