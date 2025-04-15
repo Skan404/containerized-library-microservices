@@ -17,11 +17,8 @@ public class Biblioteka {
     @Column(name = "lokalizacja")
     private String lokalizacja;
 
-    // Konstruktor bezargumentowy
     public Biblioteka() {
     }
-
-    // Gettery i settery
 
     public UUID getId() {
         return id;
