@@ -69,7 +69,7 @@ public class BibliotekaController {
       biblioteka.setLokalizacja(dto.getLokalizacja());
       Biblioteka savedBiblioteka = bibliotekaService.save(biblioteka);
 
-      // Powiadomienie KsiazkaService o nowej bibliotece
+      // Powiadomienie o nowej bibliotece
       String ksiazkaServiceUrl = "http://localhost:8081/api/ksiazki/biblioteka";
       Map<String, String> payload = Map.of(
         "bibliotekaId", savedBiblioteka.getId().toString(),
@@ -80,7 +80,6 @@ public class BibliotekaController {
         restTemplate.postForObject(ksiazkaServiceUrl, payload, Void.class);
       } catch (Exception e) {
         System.err.println("Błąd podczas powiadamiania KsiazkaService: " + e.getMessage());
-        // Możesz również logować błąd, jeśli masz zintegrowany Logger
       }
 
       return ResponseEntity.status(201).body(mapToBibliotekaReadDTO(savedBiblioteka));
@@ -111,7 +110,7 @@ public class BibliotekaController {
     if (biblioteka != null) {
       bibliotekaService.deleteById(id);
 
-      // Wysyłanie żądania przez Gateway
+      // wysylanie przez ggateway
       String ksiazkaServiceUrl = "http://localhost:8080/api/ksiazki/biblioteka/" + id;
       try {
         restTemplate.delete(ksiazkaServiceUrl);
@@ -129,7 +128,6 @@ public class BibliotekaController {
   public ResponseEntity<List<Map<String, Object>>> getElementsByCategory(@PathVariable UUID id) {
     Biblioteka biblioteka = bibliotekaService.findById(id);
     if (biblioteka != null) {
-      // Żądanie do innego mikroserwisu w celu pobrania elementów
       String ksiazkaServiceUrl = "http://localhost:8080/api/ksiazki/biblioteka/" + id;
 
       try {
