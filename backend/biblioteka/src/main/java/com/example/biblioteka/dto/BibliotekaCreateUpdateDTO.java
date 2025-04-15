@@ -7,17 +7,14 @@ public class BibliotekaCreateUpdateDTO {
 
     private String lokalizacja;
 
-    // Konstruktor bezargumentowy
     public BibliotekaCreateUpdateDTO() {
     }
 
-    // Konstruktor z wszystkimi polami
     public BibliotekaCreateUpdateDTO(String nazwa, String lokalizacja) {
         this.nazwa = nazwa;
         this.lokalizacja = lokalizacja;
     }
 
-    // Gettery i settery
     public String getNazwa() {
         return nazwa;
     }
@@ -34,7 +31,6 @@ public class BibliotekaCreateUpdateDTO {
         this.lokalizacja = lokalizacja;
     }
 
-    // Metoda toString
     @Override
     public String toString() {
         return "BibliotekaCreateUpdateDTO{" +
@@ -43,7 +39,6 @@ public class BibliotekaCreateUpdateDTO {
                 '}';
     }
 
-    // Metody equals i hashCode
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
